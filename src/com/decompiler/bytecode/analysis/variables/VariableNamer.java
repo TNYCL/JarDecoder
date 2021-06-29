@@ -1,0 +1,13 @@
+package com.decompiler.bytecode.analysis.variables;
+
+import java.util.List;
+
+public interface VariableNamer {
+    NamedVariable getName(int originalRawOffset, Ident ident, long stackPosition, boolean clashed);
+
+    List<NamedVariable> getNamedVariables();
+
+    void mutatingRenameUnClash(NamedVariable toRename);
+
+    void forceName(Ident ident, long stackPosition, String name);
+}

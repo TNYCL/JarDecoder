@@ -1,0 +1,20 @@
+package com.decompiler.bytecode.analysis.types;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * Really List<StackType> but for legibility, shortened.
+ */
+public class StackTypes extends ArrayList<StackType> {
+    public static final StackTypes EMPTY = new StackTypes();
+
+    public StackTypes(StackType... stackTypes) {
+        super(Arrays.asList(stackTypes));
+    }
+
+    public StackTypes(List<StackType> stackTypes) {
+        super(stackTypes);
+    }
+}
